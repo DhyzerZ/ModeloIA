@@ -50,7 +50,7 @@ def filter_english_reviews(df):
     stop_words = set(stopwords.words('english'))
     
     def is_english(text):
-        words = set(str(text).lower().split())  # Convert words list to set
+        words = set(str(text).lower().split()) 
         english_word_count = len(words.intersection(stop_words))
         return english_word_count >= 3
     
@@ -136,7 +136,7 @@ def final_clean_dataset(file_path, train_size=0.03, validation_size=0.10, min_le
     
     return df_train, df_validation
 
-def save_final_datasets(df_train, df_validation, train_path='final_train_dataset.csv', val_path='final_validation_dataset.csv'):
+def save_final_datasets(df_train, df_validation, train_path='train_dataset.csv', val_path='validation_dataset.csv'):
     """
     Guardar datasets procesados
     """
